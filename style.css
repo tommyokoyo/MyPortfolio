@@ -23,36 +23,62 @@ h1, h2, h3 {
 }
 
 /* Header styles */
+/* Navigation bar */
 header {
-    background: #333;
-    color: #fff;
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
     padding: 20px 0;
-    text-align: center;
 }
 
-header nav ul {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo img {
+    height: 50px; /* Adjust logo size */
+}
+
+nav .nav-links {
     list-style: none;
-    padding: 0;
+    display: flex;
 }
 
-header nav ul li {
-    display: inline;
+nav .nav-links li {
     margin: 0 15px;
 }
 
-header nav ul li a {
-    color: #fff;
+nav .nav-links li a {
     text-decoration: none;
+    color: #333; /* Dark text color */
     font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+nav .nav-links li a:hover {
+    color: #007bff; /* Highlight color on hover */
 }
 
-header p {
-    font-size: 18px;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .nav-links li {
+        margin: 10px 0;
+    }
 }
 
 /* About section */
